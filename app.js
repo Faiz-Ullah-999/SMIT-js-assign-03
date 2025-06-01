@@ -334,3 +334,360 @@ function userType() {
 }
 
 // -----------------------------------------------------------------------
+
+
+// Task No 21
+// Age-Based Grade Check
+// Check a student's marks and display:
+// "Distinction" if marks ≥ 80
+// "Pass" if marks ≥ 50 and < 80
+// "Fail" if marks < 50
+// "Invalid Marks" if marks are not between 0 and 100
+
+function stdMarks() {
+  var StdMarks = prompt('enter your marks here....???');
+  if (StdMarks >= 80 && StdMarks <= 100) {
+    alert(`Distinction \n your marks ${StdMarks}`);
+  } else if (StdMarks >= 50 && StdMarks < 80) {
+    alert(`PASS \n your marks ${StdMarks}`);
+  } else if (StdMarks < 50) {
+    alert(`FAILED \n your marks ${StdMarks}`);
+  } else {
+    alert(`${StdMarks} Invalid Marks \n marks must be between 0 to 100`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 22
+// Discount Eligibility Based on Age and Membership
+// Given a person's age and membership status, show:
+// "Senior Premium Discount" if age ≥ 60 and is a premium member
+// "Senior Discount" if age ≥ 60
+// "Premium Discount" if a premium member
+// "No Discount" otherwise
+
+
+function Disc_Membership() {
+  var oldAge = prompt('enter your age here....???');
+  var checkCard = confirm("are you (premium member)...???");
+  if (oldAge >= 60 && checkCard == true) {
+    alert('you Got \n Senior Premium Discount ' + "\n Accourding to your Age " + oldAge + "\n having premium member");
+  } else if (oldAge >= 60) {
+    alert(`Senior Discount \n Accourding to your Age ${oldAge}`);
+  } else if (checkCard === true) {
+    alert(`Premium Discount \n Due to your (premium Member)`);
+  } else {
+    alert(`No Discount`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+
+
+// Task No 23
+// Login and Email Verification
+// If user is logged in and email is verified → "Access granted"
+// If user is logged in but not verified → "Please verify your email"
+// If not logged in → "Please log in"
+
+
+function varifyEmail() {
+  var emailVarify = prompt("enter your Email Here...???", "admin123@gmail.com");
+  var verified = confirm("is it varified your email or not...???");
+
+  if (emailVarify === "admin123@gmail.com" && verified === true) {
+    alert(`${emailVarify} \n Access granted!`);
+  } else if (emailVarify === "admin123@gmail.com" && verified === false) {
+    alert(`${emailVarify} \n Please verify your email!`);
+  } else {
+    alert(`Please log in!`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+
+// Task No 24
+// Contest Eligibility
+// Check if a person is eligible to enter a contest:
+// ● Must be between ages 18–35
+// ● Must be from Pakistan or India
+// ● Must not be banned
+// Display appropriate messages for age, region, or ban issues.
+
+function contestEligible() {
+  var contest = prompt("How old are You...???");
+  var userCountry = prompt("where are you from...??? (pakistan / India)...???");
+  var userStatus = confirm("are you Banned from the Contest...???");
+
+  if ((contest >= 18 && contest <= 35) && (userCountry === "pakistan" || userCountry === "india") && userStatus === false) {
+    alert(`You are eligible to enter the contest.`);
+  } else if (!(userCountry === "pakistan" || userCountry === "india")) {
+    alert(`plz select Correct Country Name \n this Country ${userCountry} is not Acceptable`);
+  } else if (!(userStatus === true)) {
+    alert(`You are not eligible because you are banned.`);
+  } else {
+    alert(`You are not eligible due to age.`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 25
+// Subscription Access Check
+// Given the subscription plan and login status:
+// ● "Welcome Premium User" if plan is "premium" and logged in
+// ● "Welcome Free User" if plan is "free" and logged in
+// ● "Please log in to continue" if not logged in
+// ● "Invalid subscription" otherwise
+
+
+function Subscription() {
+  var Subscription = prompt('what is your plan...???', "Premium / Free");
+  var userLogin = confirm("are you Login...???");
+
+  if (Subscription === 'Premium' && userLogin === true) {
+    alert(`Welcome Premium User`);
+  } else if (Subscription === 'Free' && userLogin === false) {
+    alert(`Please log in to continue`);
+  } else {
+    alert(`Invalid subscription`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 26
+// Product Purchase Validation
+// Check product conditions:
+// ● "Buy now with discount" if price > 1000, in stock, and user is a member
+// ● "Buy now" if in stock
+// ● "Out of stock" if stock === 0
+// ● "Invalid product" otherwise
+
+
+
+function productPurchase() {
+  var prdPrice = +prompt('How much is this Product...???');
+  prdStock = confirm("product is available in Stock...???");
+  var isMember = confirm('Are You Member...???');
+
+  if (prdPrice > 1000 && prdStock === true && isMember === true) {
+    alert("Buy now with discount");
+  } else if (prdStock === true) {
+    alert("Buy now");
+  } else if (prdStock === false) {
+    alert("Out of stock");
+  } else {
+    alert("Invalid product");
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 27
+// Work Hours Check
+// Check based on hoursWorked and isWeekend:
+// ● "Overtime" if hours > 40 and not a weekend
+// ● "Weekend work" if hours > 0 and is weekend
+// ● "Regular hours" if ≤ 40
+// ● "No work" if hours === 0
+
+function workHours() {
+  var Overtime = prompt('How much hours you Worked...???');
+  var weekend = confirm('today is weekend...???');
+
+  if (Overtime > 40 && weekend !== true) {
+    alert(`${Overtime} Hours Worked Overtime...`);
+  }
+  else if (Overtime > 0 && weekend === true) {
+    alert(`${Overtime} Hours Weekend work`);
+  }
+  else if (Overtime > 0 && Overtime <= 40) {
+    alert(`${Overtime} Regular hours`);
+  }
+  else {
+    alert(`${Overtime} No Work`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 28
+// Age and Gender Classification
+// Given a user's age and gender:
+// ● "Teen Male" if age 13–19 and gender is "male"
+// ● "Teen Female" if age 13–19 and gender is "female"
+// ● "Adult" if age ≥ 20
+// ● "Child" if age < 13
+
+
+function GenderClassification() {
+  var ageGender = prompt('How old are You...???');
+  var checkGender = prompt('your Gender plz...???');
+
+  if ((ageGender >= 13 && ageGender <= 19) && checkGender === "male") {
+    alert(`Teen Male`);
+  }
+  else if ((ageGender >= 13 && ageGender <= 19) && checkGender === "female") {
+    alert(`Teen Female`);
+  }
+  else if (ageGender >= 20) {
+    alert(`Your Age is ${ageGender} \n your are Adult`);
+  }
+  else if (ageGender < 13) {
+    alert(`Your Age is ${ageGender} \n your are Child`);
+  }
+  else {
+    alert(`Invalid Inputs`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+// Task No 29
+// Weather Warning System
+// Based on temperature and humidity:
+// ● "Heatwave Alert" if temp ≥ 40 and humidity ≥ 60
+// ● "Hot and Dry" if temp ≥ 40 and humidity < 60
+// ● "Cool Weather" if temp ≤ 20
+// ● "Moderate" otherwise
+
+
+
+function weatherSystem() {
+  var currentTemp = prompt('what is (Temperature)...???');
+  var humidity = prompt('what is (Humidity)....???');
+
+  if (currentTemp >= 40 && humidity >= 60) {
+    alert(`the Weather is \nTemperature = ${currentTemp} \nHumidity =  ${humidity} \n Heat wave Alert`);
+  }
+  else if (currentTemp >= 40 && humidity < 60) {
+    alert(`the Weather is \nTemperature = ${currentTemp} \nHumidity =  ${humidity} \n Hot and Dry`);
+  }
+  else if (currentTemp <= 20) {
+    alert(`Cool Weather`);
+  }
+  else {
+    alert(`Moderate`);
+  }
+}
+
+// -----------------------------------------------------------------------
+
+
+
+// Task No 30
+// Score Grading System
+// Given a score between 0–100:
+// ● "Excellent" for 90–100
+// ● "Good" for 70–89
+// ● "Average" for 50–69
+// ● "Poor" for 30–49
+// ● "Fail" below 30
+// ● "Invalid Score" if out of range
+
+function scoreGradeSystem() {
+  var GradeScore = prompt('Dear Student tell me You Score...???');
+
+  if (GradeScore >= 90 && GradeScore <= 100) {
+    alert(`you Got ${GradeScore} Marks \n Excellent!`);
+  }
+  else if (GradeScore >= 70 && GradeScore < 80) {
+    alert(`you Got ${GradeScore} Marks \n Good!`);
+  }
+  else if (GradeScore >= 50 && GradeScore < 70) {
+    alert(`you Got ${GradeScore} Marks \n Average!`);
+  }
+  else if (GradeScore >= 30 && GradeScore < 50) {
+    alert(`you Got ${GradeScore} Marks \n Poor!`);
+  }
+  else if (GradeScore < 30) {
+    alert(`you Got ${GradeScore} Marks \n Fail!`);
+  }
+  else {
+    alert(`you inputs ${GradeScore} Marks \n Invalid Score`);
+  }
+}
+
+
+
+
+// var name = prompt('');
+// var confirm = confirm();
+
+// if () {
+//   alert(``);
+// } else if () {
+//   alert(``);
+// } else {
+//   alert(``);
+// }
+
+
+
+
+
+// -----------------------------------------------------------------------
+
+// Task No 31
+// Course Access Control
+// To access a course:
+// ● Must be logged in
+// ● Must be enrolled
+// ● Must not be banned
+// Show: "Access granted", "Enroll in course first", "User is banned", or "Please log in"
+
+
+
+// -----------------------------------------------------------------------
+
+// Task No 32
+//  Driving Conditions
+// Given a user's speed and license status:
+// ● "License suspended" if speed > 120
+// ● "Warning" if speed between 100–120
+// ● "Normal driving" if speed ≤ 100 and has license
+// ● "Driving without license" otherwise
+
+
+
+// -----------------------------------------------------------------------
+
+// Task No 33
+// Order Processing Status
+// For an online order:
+// ● "Order on the way" if payment is complete and shipped
+// ● "Preparing your order" if payment is complete and not shipped
+// ● "Awaiting payment" if payment is pending
+// ● "Payment failed" if transaction failed
+
+// -----------------------------------------------------------------------
+
+
+// Task No 34
+// Battery Status Checker
+// Given battery level and charging state:
+// ● "Fully Charged" if level === 100
+// ● "Charging..." if level < 100 and charging
+// ● "Low Battery" if level < 20 and not charging
+// ● "Battery OK" otherwise
+
+
+// -----------------------------------------------------------------------
+
+
+// Task No 35
+// Browser and Device Compatibility Check
+// Based on user's browser and device:
+// ● "Full features enabled" if browser is Chrome and device is Desktop
+// ● "Limited mobile features" if browser is Chrome and device is Mobile
+// ● "Please switch to Chrome" for all other browsers
+
+
+// -----------------------------------------------------------------------
+
+
+
