@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Tasks</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="max-w-8xl mx-auto py-10 px-4">
+      <h1 class="text-3xl font-bold text-center mb-8">JavaScript Tasks (If Else & Comparison Operators)</h1>
+
+      <div class="space-y-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 1: Check if
+              User is Adult or Minor</p>
+            <button onclick="ageBtn()"
+              class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition">Check
+              Age</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 2: Positive /
+              Negative Number Check</p>
+            <button onclick="randomNo()"
+              class="w-full py-2 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-semibold rounded hover:from-teal-600 hover:to-emerald-600 transition">Check
+              Number</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 3: Check Odd
+              or Even</p>
+            <button onclick="oddEven()"
+              class="w-full py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded hover:from-pink-600 hover:to-rose-600 transition">Odd
+              / Even</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 4: Admin
+              Login</p>
+            <button onclick="adminBtn()"
+              class="w-full py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded hover:from-blue-600 hover:to-cyan-600 transition">Login
+              as Admin</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 5: Compare
+              Two Numbers (Equality)</p>
+            <button onclick="twoNoBtn()"
+              class="w-full py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded hover:from-orange-600 hover:to-yellow-600 transition">Compare
+              Equality</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 6: Compare
+              Which Number is Bigger</p>
+            <button onclick="bigSmallNo()"
+              class="w-full py-2 bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white font-semibold rounded hover:from-fuchsia-600 hover:to-pink-600 transition">Find
+              Larger</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 7: Number
+              Range Check (0-100)</p>
+            <button onclick="randNoBtn()"
+              class="w-full py-2 bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold rounded hover:from-teal-600 hover:to-green-600 transition">Check
+              Range</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 8: Student
+              Score Pass/Fail</p>
+            <button onclick="stdScore()"
+              class="w-full py-2 bg-gradient-to-r from-indigo-500 to-sky-500 text-white font-semibold rounded hover:from-indigo-600 hover:to-sky-600 transition">Enter
+              Score</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 9:
+              Temperature Hot/Not</p>
+            <button onclick="temperature()"
+              class="w-full py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded hover:from-orange-600 hover:to-red-600 transition">Check
+              Temperature</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 10: Zero or
+              Not Zero</p>
+            <button onclick="zeroBtn()"
+              class="w-full py-2 bg-gradient-to-r from-zinc-500 to-gray-700 text-white font-semibold rounded hover:from-zinc-600 hover:to-gray-800 transition">Zero
+              Check</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 11: Check if
+              Senior Citizen</p>
+            <button onclick="AgeOld()"
+              class="w-full py-2 bg-gradient-to-r from-lime-500 to-green-600 text-white font-semibold rounded hover:from-lime-600 hover:to-green-700 transition">Check
+              Age Group</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 12: Are You
+              Faiz Ilham?</p>
+            <button onclick="ilhamBtn()"
+              class="w-full py-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded hover:from-pink-700 hover:to-rose-700 transition">Who
+              Are You?</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 13: Check
+              Password</p>
+            <button onclick="passBtn()"
+              class="w-full py-2 bg-gradient-to-r from-blue-700 to-indigo-700 text-white font-semibold rounded hover:from-blue-800 hover:to-indigo-800 transition">Enter
+              Password</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 14: Greet
+              Based on Time</p>
+            <button onclick="currentTime()"
+              class="w-full py-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded hover:from-emerald-600 hover:to-cyan-600 transition">Greet
+              Me</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 15: Divisible
+              by 5</p>
+            <button onclick="userNo()"
+              class="w-full py-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white font-semibold rounded hover:from-yellow-600 hover:to-amber-600 transition">Check
+              Divisibility</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 16: Want to
+              Play a Game?</p>
+            <button onclick="playGame()"
+              class="w-full py-2 bg-gradient-to-r from-rose-400 to-red-500 text-white font-semibold rounded hover:from-rose-500 hover:to-red-600 transition">Play
+              Game</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 17: Favorite
+              Color</p>
+            <button onclick="favColor()"
+              class="w-full py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded hover:from-indigo-600 hover:to-purple-600 transition">Enter
+              Color</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 18: Check Day
+              (Weekend or Not)</p>
+            <button onclick="Weekend()"
+              class="w-full py-2 bg-gradient-to-r from-violet-500 to-indigo-500 text-white font-semibold rounded hover:from-violet-600 hover:to-indigo-600 transition">Check
+              Day</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 19: Fruit
+              Availability</p>
+            <button onclick="Fruits()"
+              class="w-full py-2 bg-gradient-to-r from-green-500 to-lime-500 text-white font-semibold rounded hover:from-green-600 hover:to-lime-600 transition">Check
+              Fruit</button>
+          </div>
+
+          <div
+            class="p-4 border rounded-lg hover:shadow-md transition duration-300">
+            <p class="text-lg font-medium mb-3 text-gray-700">Task 20: Start the
+              Game</p>
+            <button onclick="userType()"
+              class="w-full py-2 bg-gradient-to-r from-blue-500 to-sky-500 text-white font-semibold rounded hover:from-blue-600 hover:to-sky-600 transition">Start
+              Game</button>
+          </div>
+        </div>
+
+        <script src="app.js"></script>
+      </body>
+    </html>
