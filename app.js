@@ -555,8 +555,6 @@ function GenderClassification() {
 // ● "Cool Weather" if temp ≤ 20
 // ● "Moderate" otherwise
 
-
-
 function weatherSystem() {
   var currentTemp = prompt('what is (Temperature)...???');
   var humidity = prompt('what is (Humidity)....???');
@@ -576,7 +574,6 @@ function weatherSystem() {
 }
 
 // -----------------------------------------------------------------------
-
 
 
 // Task No 30
@@ -728,7 +725,6 @@ function batteryStatus() {
 }
 
 // -----------------------------------------------------------------------
-
 
 // Task No 35
 // Browser and Device Compatibility Check
