@@ -612,24 +612,6 @@ function scoreGradeSystem() {
   }
 }
 
-
-
-
-// var name = prompt('');
-// var confirm = confirm();
-
-// if () {
-//   alert(``);
-// } else if () {
-//   alert(``);
-// } else {
-//   alert(``);
-// }
-
-
-
-
-
 // -----------------------------------------------------------------------
 
 // Task No 31
@@ -641,18 +623,52 @@ function scoreGradeSystem() {
 // Show: "Access granted", "Enroll in course first", "User is banned", or "Please log in"
 
 
+function courseAccess() {
+  var courseLogin = confirm('are you Login...???');
+  var courseEnroll = confirm('Are you Enrolled in Course...???');
+  var courseBanned = confirm('Are you Banned From Course...???');
+
+  if (courseLogin === true && courseEnroll === true && courseBanned === false) {
+    alert(`Access Granted...!!!`);
+  }
+  else if (courseEnroll === false) {
+    alert(`Enroll in course first`);
+  }
+  else if (courseBanned === true) {
+    alert(`User is Banned`);
+  }
+  else {
+    alert(`Please Login First`);
+  }
+}
 
 // -----------------------------------------------------------------------
 
 // Task No 32
-//  Driving Conditions
+// Driving Conditions
 // Given a user's speed and license status:
 // ● "License suspended" if speed > 120
 // ● "Warning" if speed between 100–120
 // ● "Normal driving" if speed ≤ 100 and has license
 // ● "Driving without license" otherwise
 
+function drivingCondition() {
+  var bikeSpeed = +prompt('How Much Speed Are you Riding Bike...??? \n over the 120 will suspend');
+  var hasLicense = confirm('you Have License...???');
 
+  if (bikeSpeed > 120) {
+    alert(`your Bike Speed ${bikeSpeed} is too High Your License Suspended`);
+  }
+  else if (bikeSpeed >= 100 && bikeSpeed <= 120) {
+    alert(`your Bike Speed ${bikeSpeed} \n You're in (Warning High Risk)`);
+  }
+  else if (bikeSpeed < 100 && hasLicense === true) {
+    alert(`your Bike Speed ${bikeSpeed} \n You're Riding (Normal driving)`);
+  }
+  else {
+    alert(`Driving without license`);
+  }
+}
 
 // -----------------------------------------------------------------------
 
@@ -664,8 +680,26 @@ function scoreGradeSystem() {
 // ● "Awaiting payment" if payment is pending
 // ● "Payment failed" if transaction failed
 
-// -----------------------------------------------------------------------
 
+function orderStatus() {
+  var onlineOrder = confirm('is Payment is Completed or not...???');
+  var shipped = confirm("the Product is Shipped or not...???");
+
+  if (onlineOrder === true && shipped === true) {
+    alert(`Order on the way`);
+  }
+  else if (onlineOrder === true && shipped === false) {
+    alert(`Preparing your order`);
+  }
+  else if (onlineOrder === false) {
+    alert(`Awaiting payment`);
+  }
+  else {
+    alert(`Payment failed`);
+  }
+}
+
+// -----------------------------------------------------------------------
 
 // Task No 34
 // Battery Status Checker
@@ -675,6 +709,23 @@ function scoreGradeSystem() {
 // ● "Low Battery" if level < 20 and not charging
 // ● "Battery OK" otherwise
 
+function batteryStatus() {
+  var batteryLevel = +prompt('Howm Much You Phone Battery Charged...???');
+  var isCharging = confirm("is the Phone Charging...???");
+
+  if (batteryLevel === 100) {
+    alert(`Fully Charged`);
+  }
+  else if (batteryLevel < 100 && isCharging === true) {
+    alert(`your Phone Charge is ${batteryLevel} \n Still now Charging!`);
+  }
+  else if (batteryLevel < 20 && isCharging === false) {
+    alert(`your Phone Charge is ${batteryLevel} \n Low Battery!`);
+  }
+  else {
+    alert(`Battry OK`);
+  }
+}
 
 // -----------------------------------------------------------------------
 
@@ -686,8 +737,19 @@ function scoreGradeSystem() {
 // ● "Limited mobile features" if browser is Chrome and device is Mobile
 // ● "Please switch to Chrome" for all other browsers
 
+function browserDeviceChecing() {
+  var Browser = prompt('which Browser is Using now...??? \n Write Chrome');
+  var Device = prompt('what is your Device...??? \n(Desktop or Mobile)');
 
+  if (Browser === "Chrome" && Device === "Desktop") {
+    alert(`Your Browser is = ${Browser} \nyour Device is = ${Device} \nit's means (Full Features Enabled)`);
+  }
+  else if (Browser === "Chrome" && Device === "Mobile") {
+    alert(`Your Browser is ${Browser} \nyour Device is = ${Device} \nit's means (Limited mobile features)`);
+  }
+  else {
+    alert(`Please switch to Chrome`);
+  }
+
+}
 // -----------------------------------------------------------------------
-
-
-
