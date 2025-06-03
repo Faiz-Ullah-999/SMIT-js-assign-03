@@ -732,7 +732,7 @@ function batteryStatus() {
 // ● "Limited mobile features" if browser is Chrome and device is Mobile
 // ● "Please switch to Chrome" for all other browsers
 
-function browserDeviceChecing() {
+function browserDeviceChecking() {
   var Browser = prompt('which Browser is Using now...??? \n Write Chrome');
   var Device = prompt('what is your Device...??? \n(Desktop or Mobile)');
 
@@ -745,6 +745,6 @@ function browserDeviceChecing() {
   else {
     alert(`Please switch to Chrome`);
   }
-
 }
+
 // -----------------------------------------------------------------------
