@@ -12,7 +12,6 @@ function ageBtn() {
 }
 // ----------------------------------------------------------
 
-
 // Task No 2
 // Ask the user to enter a number. If it's positive, log: "Positive number"; else log:
 // "Not positive".
